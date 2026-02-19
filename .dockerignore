@@ -1,0 +1,13 @@
+.git
+.next
+node_modules
+frontend
+ffmpeg
+ffmpeg.zip
+backend/venv
+backend/processed
+backend/uploads
+*.log
+backend_logs.txt
+dev_logs.txt
+dev_logs_utf8.txt

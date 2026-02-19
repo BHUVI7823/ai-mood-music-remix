@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+torch
+torchaudio
+demucs
+numpy
+scipy
+pydantic
+python-dotenv
+transformers
+accelerate
+soundfile
+librosa

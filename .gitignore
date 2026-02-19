@@ -1,0 +1,32 @@
+# Node
+node_modules/
+.next/
+out/
+build/
+.vercel
+*.log
+backend_logs.txt
+dev_logs.txt
+dev_logs_utf8.txt
+
+# Python
+backend/venv/
+backend/__pycache__/
+backend/processed/
+backend/uploads/
+backend/separation_debug.log
+backend/file_list.txt
+.pytest_cache/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Large Files
+ffmpeg/
+ffmpeg.zip
+
+# OS
+.DS_Store
+thumbs.db
