@@ -1,0 +1,37 @@
+﻿@import "tailwindcss";
+
+:root {
+  --color-background: 224 71% 4%;
+  --color-foreground: 213 31% 91%;
+  --color-primary: 262 83% 58%;
+  --color-secondary: 222 47% 11%;
+  --color-accent: 262 83% 58%;
+  --radius: 1rem;
+  
+  --bg-gradient: radial-gradient(circle at top right, #1a0b2e, #09090b);
+}
+
+[data-theme="space"] { --bg-gradient: radial-gradient(circle at top right, #1a0b2e, #09090b); }
+[data-theme="sunset"] { --bg-gradient: linear-gradient(135deg, #2e1065, #7c2d12, #0c0a09); }
+[data-theme="ocean"] { --bg-gradient: linear-gradient(135deg, #0f172a, #0891b2, #020617); }
+[data-theme="cyberpunk"] { --bg-gradient: linear-gradient(135deg, #000000, #4c0519, #1e1b4b); }
+
+body {
+  color: hsl(var(--color-foreground));
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  font-family: var(--font-outfit), sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg-blob { position: fixed; width: 500px; height: 500px; background: hsl(var(--color-primary)); filter: blur(120px); opacity: 0.15; border-radius: 50%; z-index: -1; animation: move 25s infinite alternate; }
+.bg-blob-2 { background: #ec4899; animation: move 30s infinite alternate-reverse; left: 30%; top: 20%; }
+@keyframes move { from { transform: translate(-10%, -10%) scale(1); } to { transform: translate(20%, 30%) scale(1.2); } }
+.glass-panel { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36); }
+.premium-btn { padding: 0.75rem 1.5rem; border-radius: 0.75rem; font-weight: 700; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.05); }
+.premium-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2); }
+.shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); background-size: 200% 100%; animation: shimmer 2s infinite; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+input[type="range"] { accent-color: hsl(var(--color-primary)); }
